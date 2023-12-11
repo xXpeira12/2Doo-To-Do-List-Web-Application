@@ -19,7 +19,11 @@ process.on("unhandledRejection", (err) => {
   });
 });
 
-const PORT = 3222;
-app.listen(PORT, "0.0.0.0", () => {
+const PORT = process.env.PORT || 3222; // Use the dynamic port provided by the hosting environment
+
+const server = app.listen(PORT, "0.0.0.0", () => {
   console.log(`Backend Server ready at http://localhost:${PORT}`);
 });
+
+// Export the server for potential future use (e.g., for closing the server during testing)
+export default server;
