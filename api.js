@@ -1,5 +1,6 @@
 // เปลี่ยน localhost -> Public IPv4 address
-const backend_uri = "http://localhost:3222"
+// const backend_uri = "http://localhost:3222"
+const backend_uri = "https://backend-service-kdww.onrender.com"
 
 // get all apts data
 async function getApts() {
